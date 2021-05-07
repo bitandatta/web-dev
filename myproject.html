@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<html>
+    
+    <head>
+        
+        <meta charset="utf-8">
+        <title> Web development course</title>
+        <style type="text/css">
+            p,ul {        
+    color:teal;
+    font-size: 20px;
+    line-height: 2;
+    
+  
+}
+h1{
+    color: brown;
+    font-size: 65px;
+    text-align: center;
+    border: 1px solid brown;
+    margin: 0;
+    padding: 20px 0;
+    text-shadow: 3px 3px 3px #6E2313;
+}
+#para1{
+    text-align: center;
+    font-weight: 900;
+}
+body{
+    margin: 0 auto;
+    padding: 0 20px 20px 20px;
+    width: 1000px;
+    border: 3px solid teal;
+    background-color: antiquewhite;
+    text-align: center;
+    font-family: Loco;
+}
+html{
+    background-color: azure;
+}
+        </style>
+        <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Lora">
+    
+    </head>
+    
+    <body>
+        <h1> Hello Internet!</h1>
+        <h3> An attempt to share knowledge.</h3>
+        <a href="https://en.wikipedia.org/wiki/Web_development">What is web development?</a>
+        <p>You can learn full stack web development in 33 and a half hours!</p>
+        <img src="webdevboi.jpg" alt="req img">
+        <h6>click on image for next image</h6>
+        <ul>Following are the requirements for participating In this course:
+            
+            <li>No previous programming knowledge required!</li>
+            <li>All you need is a PC or a Mac with an Internet connection.</li>
+            
+        </ul>
+        <p ID="para1">Take the course and add a new bullet point to your resume.Click <a href="https://www.udemy.com/course/full-stack-web-development-for-beginners/">here</a> for more details.</p>
+        <h5>enjoy!</h5>
+        <button>Change Name</button>
+            
+        <script>
+            /* global document,window,localStorage */
+var dogImg = document.querySelector('img');
+dogImg.onclick = function()
+{
+    var img = dogImg.getAttribute('src');
+    if(img === 'webdevboi.jpg')
+        dogImg.setAttribute('src','webdevimg.jpg');
+    else
+        dogImg.setAttribute('src','webdevboi.jpg');
+            var myName = window.prompt('Please state your name');
+    localStorage.setItem('name',myName);
+    myHeading.textContent = 'Hello , ' + myName + '!';
+}
+if(!localStorage.getItem('name'))
+    setUserName;
+else
+    {
+        var storedname = localStorage.getItem('name');
+        myHeading.textContent = 'Hello , ' + storedname
+    }
+nameButton.onclick = function()
+{
+    setUserName();
+}
+        </script>
+    
+    </body>
+
+</html>
